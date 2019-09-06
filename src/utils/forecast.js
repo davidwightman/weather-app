@@ -10,7 +10,8 @@ const forcast = (longitude, latitude, callback) => {
         } else if (response.body.error) {
             callback('uable to find location')
         }else {
-            callback(undefined, `it is currently ${currently.temperature} there is ${currently.precipProbability}% chance of rain`)
+            console.log(currently)
+            callback(undefined, `It is currently ${currently.temperature} degrees out. It feels like ${currently.apparentTemperature} degrees. There is ${currently.precipProbability}% chance of rain.`)
         }
     });
 }
