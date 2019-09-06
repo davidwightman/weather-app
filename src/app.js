@@ -27,12 +27,13 @@ name: 'David Wightman'})
 })
 
 app.get('/about', (req, res) => {
-    res.render('about', { title: 'About Me', 
-name: 'David Wightman'})
+    res.render('about', { title: 'About', 
+name: 'David Wightman',
+message: 'This app was built with Node.js and Express on the backend and Handlebars on the front end. The Mapbox API was used for geolocation and the Darksky API was used for weather data.'})
 })
 
 app.get('/help', (req, res) => {
-    res.render('help', { message: 'Some helpful example Message',
+    res.render('help', { message: 'Coming soon.',
 title: 'Help',
 name: 'David Wightman'})
 })
